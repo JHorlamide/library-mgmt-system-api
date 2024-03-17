@@ -10,7 +10,9 @@ User = get_user_model()
 
 class BookAPITests(APITestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="test_user", password="test_password")
+        self.user = User.objects.create_user(
+            username="test_user", password="test_password"
+        )
         self.client.force_authenticate(user=self.user)
 
         # Create some initial books for testing
@@ -21,7 +23,7 @@ class BookAPITests(APITestCase):
             publication_date="2022-01-01",
             owner=self.user,
         )
-        
+
         self.book2 = Book.objects.create(
             title="Book 2",
             author="Author 2",

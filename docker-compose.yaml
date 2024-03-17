@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    networks:
+      - library-api-network
+    env_file:
+      - ./env/mysql.env
+
+  libaray-api:
+    container_name: libaray-api
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/app:cached
+      - dna-seq-migrations:/app/dna_sequence/migrations
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    networks:
+      - library-api-network
+    restart: unless-stopped
+    ports: ["7072:7072"]
+    depends_on: ["mysql2"]
+
+networks:
+  library-api-network:
