@@ -6,12 +6,9 @@ from .serializers import BookSerializer
 
 User = get_user_model()
 
-
 class TestsBookAPI(APITestCase):
     def setUp(self):
-        self.user = User.objects.create_user(
-            username="test_user", password="test_password"
-        )
+        self.user = User.objects.create_user(username="test_user", password="test_password")
 
         # Create some initial books for testing
         self.book1 = Book.objects.create(

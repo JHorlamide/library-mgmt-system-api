@@ -1,18 +1,18 @@
 -i https://pypi.org/simple
-asgiref==3.7.2 ; python_version >= '3.7'
-certifi==2024.2.2 ; python_version >= '3.6'
-charset-normalizer==3.3.2 ; python_full_version >= '3.7.0'
+asgiref==3.7.2
+certifi==2024.2.2
+charset-normalizer==3.3.2
 django==5.0.3
 djangorestframework==3.15.0
 drf-yasg==1.21.7
-idna==3.6 ; python_version >= '3.5'
-inflection==0.5.1 ; python_version >= '3.5'
-packaging==24.0 ; python_version >= '3.7'
+idna==3.6
+inflection==0.5.1
+packaging==24.0
 psycopg2==2.9.9
 pytz==2024.1
-pyyaml==6.0.1 ; python_version >= '3.6'
+pyyaml==6.0.1
 requests==2.31.0
-sqlparse==0.4.4 ; python_version >= '3.5'
-typing-extensions==4.10.0 ; python_version < '3.11'
-uritemplate==4.1.1 ; python_version >= '3.6'
-urllib3==2.2.1 ; python_version >= '3.8'
+sqlparse==0.4.4
+typing-extensions==4.10.0
+uritemplate==4.1.1
+urllib3==2.2.1

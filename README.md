@@ -39,6 +39,10 @@ The API endpoints of the service are described below:
 * `PUT /books/:bookId:` Update a book with the given ID
 * `DELETE /api/:bookId:` Delete a book with the given ID
 
+## Reading the docs
+
+To access the API documentation open `http://127.0.0.1:8000/swagger/` in your broswer.
+
 ## Running Test
 
 To ensure the reliability and accuracy of the application, I have implemented a simple suite of tests. While these tests are not exhaustive, but they cover some critical aspects of the API implementation. To run the tests, use the following commands:
