@@ -16,6 +16,15 @@ To install this application, follow these steps:
 * Clone this repository to your machine: `git clone https://github.com/JHorlamide/library-mgmt-system-api.git`
 * Navigate to the project directory: `cd library-mgmt-system-api`
 
+## Generating token
+
+To generate a test token to test run the following command below:
+	1: `python manage.py createsuperuser --username vitor --email vitor@example.com`
+
+    2:`python manage.py drf_create_token vitor`
+
+After the token as been generated copy the token and add the ***Authorization:** Token `<token_code>` in your request header.*
+
 ## Running the Application
 
 To start the application use docker compose:
